@@ -37,7 +37,11 @@ class _Contact_listState extends State<Contact_list> {
         onCancel: ()=>Navigator.of(context).pop());
      });
   }
-
+  void delContact(index){
+    setState(() {
+      liste.removeAt(index);
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +57,7 @@ class _Contact_listState extends State<Contact_list> {
             nomContact: liste[index][0],
             selContact: liste[index][1],
             onChanged: (value)=> change(value, index),
+            delContact: (context)=> delContact(index),
             );
         }));
   }
