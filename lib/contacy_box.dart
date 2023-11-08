@@ -3,12 +3,20 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 
 class ContactBox extends StatelessWidget {
   String nomContact;
+  String prenomContact;
+  int ageContact;
+  String emailContact;
+  String photoContact;
   bool selContact;
   Function(bool?)? onChanged;
   Function(BuildContext context)?delContact;
   ContactBox({
     super.key,
     required this.nomContact,
+    required this.prenomContact,
+    required this.ageContact,
+    required this.emailContact,
+    required this.photoContact,
     required this.selContact,
     required this.onChanged,
     required this.delContact
